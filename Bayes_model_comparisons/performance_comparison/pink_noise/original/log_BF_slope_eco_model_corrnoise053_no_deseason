@@ -1,0 +1,96 @@
+calculate_Bayes_Factor.py:166: RuntimeWarning: divide by zero encountered in log
+  log_evidence_model2 = np.log(np.sum(np.exp(log_LH_model2_array)) / float(n_prior_samples))
+calculate_Bayes_Factor.py:199: RuntimeWarning: divide by zero encountered in double_scalars
+  print('averaged evidences BF12: ' + str(np.sum(np.exp(log_evidence_M1_array))/np.sum(np.exp(log_evidence_M2_array))))
+calculate_Bayes_Factor.py:41: RuntimeWarning: divide by zero encountered in double_scalars
+  return N / denominator
+calculate_Bayes_Factor.py:40: RuntimeWarning: divide by zero encountered in true_divide
+  denominator = np.sum(1. / x)
+(3, 242)
+time of no possible return: 94.79184898112264
+______MC run: 1/1______
+data_shape:  (132,)
+-22.665066026410564
+0.46573878119950274
+[-35311.36986189   -544.01097255   -330.0840635  ...   -368.04409384
+  -1418.02253474   -362.06802504]
+[-93191.15395654  -7299.69710986  -2646.64548437 ...  -4048.79727735
+  -3171.30448566  -2376.10232255]
+10000000.0
+________________________________________
+______Bayes factor analysis output______
+________________________________________
+log_evidence_model1: -320.2939035931878
+log_evidence_model2: -inf
+log_BF12: inf
+BF12: inf
+log_BF21: -inf
+BF21: 0.0
+________________________________________
+________________________________________
+All BF21 factors are greater than 10 : False
+All BF12 factors are smaller than 0.1 : False
+average_BF12: inf
+average_BF21: 0.0
+averaged evidences BF12: inf
+averaged evidences BF21: 0.0
+harmonic average BF12: inf
+harmonic average BF21: 0.0
+time of no possible return: 94.79184898112264
+______MC run: 1/1______
+data_shape:  (132,)
+-13.927571028411364
+0.3296708234820646
+[ -668.79807921  -397.65482618  -517.04339245 ... -1655.06565902
+ -2268.96456614 -2905.39238005]
+[-7664.25697058  -914.43894195  -710.34169588 ... -3488.51571029
+ -5643.32123656 -2980.34883873]
+10000000.0
+________________________________________
+______Bayes factor analysis output______
+________________________________________
+log_evidence_model1: -280.9387135068117
+log_evidence_model2: -516.9690989101754
+log_BF12: 236.03038540336365
+BF12: 3.211396592184702e+102
+log_BF21: -236.03038540336365
+BF21: 3.113910011717685e-103
+________________________________________
+________________________________________
+All BF21 factors are greater than 10 : False
+All BF12 factors are smaller than 0.1 : False
+average_BF12: 3.211396592184702e+102
+average_BF21: 3.113910011717685e-103
+averaged evidences BF12: 3.211396592184702e+102
+averaged evidences BF21: 3.1139100117176857e-103
+harmonic average BF12: 3.211396592184702e+102
+harmonic average BF21: 3.113910011717685e-103
+time of no possible return: 94.79184898112264
+______MC run: 1/1______
+data_shape:  (132,)
+0.0
+0.0
+[-308.0915528  -251.94930948 -284.40161146 ...  -87.87920357 -265.87007927
+ -337.92204604]
+[-308.0915528  -251.94930948 -284.40161146 ...  -87.87920357 -265.87007927
+ -337.92204604]
+10000000.0
+________________________________________
+______Bayes factor analysis output______
+________________________________________
+log_evidence_model1: -38.652927925801606
+log_evidence_model2: -38.652927925801606
+log_BF12: 0.0
+BF12: 1.0
+log_BF21: 0.0
+BF21: 1.0
+________________________________________
+________________________________________
+All BF21 factors are greater than 10 : False
+All BF12 factors are smaller than 0.1 : False
+average_BF12: 1.0
+average_BF21: 1.0
+averaged evidences BF12: 1.0
+averaged evidences BF21: 1.0
+harmonic average BF12: 1.0
+harmonic average BF21: 1.0
