@@ -1,0 +1,5 @@
+The drift slope calculations can be performed using "antiCPy".
+
+You can find the package under https://github.com/MartinHessler/antiCPy .
+
+The package is documented on read the docs at https://anticpy.readthedocs.io/en/latest/ .
