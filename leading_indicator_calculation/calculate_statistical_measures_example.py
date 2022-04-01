@@ -3,32 +3,8 @@ import pylab
 import time
 import matplotlib.pyplot as plt
 from scipy.ndimage.filters import gaussian_filter
-
-def mean(data):
-	return sum(data)/data.size
-
-def standard_deviation(data):
-	global window_size
-	return np.sqrt((1./(window_size-1))*sum((data-mean(data))**2))
-
-def standard_deviation_n_denominator(data):
-	global window_size
-	return np.sqrt((1./(window_size))*sum((data-mean(data))**2))
-
-def nominator(data, time_lag):
-	rolleddata=np.roll(data,shift=-time_lag)
-	return((1./(window_size-1-time_lag))*sum((data[:data.size-time_lag]-mean(data[:data.size-time_lag]))*(rolleddata[:data.size-time_lag]-mean(rolleddata[:data.size-time_lag]))))
-
-def autocorrelation(data, time_lag = 1):
-	return (nominator(data, time_lag)/standard_deviation(data)**2)
-
-def skewness(data):
-	global window_size
-	return (1./window_size)*sum((data-mean(data))**3)/standard_deviation_n_denominator(data)
-
-def kurtosis(data):
-	global window_size
-	return (1./window_size) * sum((data-mean(data))**4)/standard_deviation_n_denominator(data)**2
+from statsmodels.tsa.stattools import acf
+import scipy.stats as sts
 
 
 sigma_array = np.array([0.1, 2.2, 4.5])
@@ -48,8 +24,6 @@ qE_increment = 0.013 # per year (choose 0.013)
 qE_init = 1.
 qE_param = np.arange(qE_init, qE_init + simulation_length * qE_increment, qE_increment / within_year_points)
 
-print(qE_param.size)
-
 window_size = 750
 window_shift = 30
 
@@ -68,23 +42,50 @@ for sigma in sigma_array:
 	for k in range(loop_range_size):
 		data_window = np.roll(data, shift = - loop_range[k])[:window_size]
 		time_window = np.roll(time, shift = - loop_range[k])[:window_size]
-		AR1_array[i, k] = autocorrelation(data_window)
-		std_array[i, k] = standard_deviation(data_window)
-		skew_array[i, k] = skewness(data_window)
-		kurt_array[i, k] = kurtosis(data_window)
+		AR1_array[i, k] = acf(data_window, adjusted = False, nlags = 1)[1]
+		std_array[i, k] = np.std(data_window, ddof = 0)
+		skew_array[i, k] = sts.skew(data_window, bias = True)
+		kurt_array[i, k] = sts.kurtosis(data_window, fisher = False, bias = True)
 		print(r'progress: ' + str(k+1) + r'/' + str(loop_range_size) + r'   |||   ' + r'$\sigma$: ' + str(sigma))
 	if show_indicators:
+		figure_label = np.array(['A', 'B', 'C'])
+		original_data = np.load('ecological_model_planktivores_sig' + str(sigma) + 'ppyear50.npy')
+		for j in range(original_data.size):
+			if original_data[j] >= 21:
+				critical_transition = j
+				break
+		for j in range(loop_range_size):
+			if window_size - 1 + loop_range[j] >= critical_transition:
+				critical_transition = j + 1
+				break
 		print('Show indicators.')
-		plt.plot(time[loop_range], AR1_array[i,:], label = 'AR1')
-		plt.plot(time[loop_range], std_array[i,:], label = 'std')
-		plt.plot(time[loop_range], skew_array[i,:], label = 'skew')
-		plt.plot(time[loop_range], kurt_array[i,:], label = 'kurt')
-		plt.xlabel('indicator')
-		plt.xlabel('control parameter r')
-		plt.legend()
-		plt.savefig('indicators_sigma' + str(sigma) + '.png')
+		fig, ax = plt.subplots(1,1)
+		plt.text(0.025, 0.85, figure_label[i], transform=ax.transAxes, fontsize = 40)
+		plt.plot(time[window_size - 1 + loop_range[:critical_transition]], AR1_array[i,:loop_range[:critical_transition].size], label = 'AR1')
+		plt.plot(time[window_size - 1 + loop_range[:critical_transition]], std_array[i,:loop_range[:critical_transition].size], label = r'std $\hat{\sigma}$')
+		plt.plot(time[window_size - 1 + loop_range[:critical_transition]], skew_array[i,:loop_range[:critical_transition].size], label = r'skewness $\gamma$')
+		plt.plot(time[window_size - 1 + loop_range[:critical_transition]], kurt_array[i,:loop_range[:critical_transition].size], label = r'kurtosis $\omega$')
+		plt.xlim(0,time[window_size - 1 + loop_range[critical_transition - 1]])
+		plt.xticks([0,75], fontsize = 22)
+		plt.axvline(94.63182897862232, ls = '-', lw = 2, color = 'orange')
+		plt.xlabel(r'time $t$', fontsize = 25)
+		if i == 0:
+			plt.yticks([0,6,12], fontsize = 22)
+			plt.legend(loc = 'upper center', fontsize = 20)
+		elif i == 1:
+			plt.yticks([0,3,6], fontsize = 22)
+		else:
+			plt.yticks([0,2.5,5], fontsize = 22)
+		plt.subplots_adjust(left  = 0.093,
+			right = 0.94,
+			bottom = 0.18,
+			top = 0.955,
+			wspace = 0.2,
+			hspace = 0.2)
+		plt.savefig('indicators_without_deseason_white_sigma' + str(sigma) + '.png')
 		plt.show()
 	i += 1
+
 
 print('Save indicators.')
 np.save('AR1_array_all_sigma.npy', AR1_array)
