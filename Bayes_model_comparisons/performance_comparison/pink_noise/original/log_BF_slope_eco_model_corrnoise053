@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "calculate_Bayes_Factor.py", line 46, in <module>
-    data = np.load('polynom_slope_trends_sigma0.1_2.2_4.5_phi0.92_ws750.npy')[:,:,0]
-  File "/home/users/m_hess23/.local/lib/python3.5/site-packages/numpy/lib/npyio.py", line 428, in load
-    fid = open(os_fspath(file), "rb")
-FileNotFoundError: [Errno 2] No such file or directory: 'polynom_slope_trends_sigma0.1_2.2_4.5_phi0.92_ws750.npy'
