@@ -1,0 +1,63 @@
+Unable to init server: Could not connect: Connection refused
+Unable to init server: Verbindung ist gescheitert: Connection refused
+
+(calculate_Bayes_Factor_for_skewness.py:868261): Gdk-CRITICAL **: 21:07:41.712: gdk_cursor_new_for_display: assertion 'GDK_IS_DISPLAY (display)' failed
+
+(calculate_Bayes_Factor_for_skewness.py:868261): Gdk-CRITICAL **: 21:07:41.713: gdk_cursor_new_for_display: assertion 'GDK_IS_DISPLAY (display)' failed
+________________________________________
+______Bayes factor analysis output______
+________________________________________
+log_evidence_model1: -65.53367246788686
+log_evidence_model2: -61.30478804535552
+log_BF12: -4.228884422531337
+BF12: 0.014568633926115626
+log_BF21: 4.228884422531337
+BF21: 68.64061552177569
+________________________________________
+________________________________________
+All BF21 factors are greater than 10 : True
+All BF12 factors are smaller than 0.1 : True
+average_BF12: 0.014568633926115626
+average_BF21: 68.64061552177569
+averaged evidences BF12: 0.014568633926115624
+averaged evidences BF21: 68.64061552177569
+harmonic average BF12: 0.014568633926115624
+harmonic average BF21: 68.64061552177569
+________________________________________
+______Bayes factor analysis output______
+________________________________________
+log_evidence_model1: -51.750445571339036
+log_evidence_model2: -48.17557421873939
+log_BF12: -3.5748713525996436
+BF12: 0.028019030117757287
+log_BF21: 3.5748713525996436
+BF21: 35.69002909084429
+________________________________________
+________________________________________
+All BF21 factors are greater than 10 : True
+All BF12 factors are smaller than 0.1 : True
+average_BF12: 0.028019030117757287
+average_BF21: 35.69002909084429
+averaged evidences BF12: 0.028019030117757287
+averaged evidences BF21: 35.69002909084429
+harmonic average BF12: 0.02801903011775729
+harmonic average BF21: 35.69002909084429
+________________________________________
+______Bayes factor analysis output______
+________________________________________
+log_evidence_model1: -60.35567910336284
+log_evidence_model2: -57.22421069936178
+log_BF12: -3.131468404001062
+BF12: 0.04365364897366865
+log_BF21: 3.131468404001062
+BF21: 22.907592458151388
+________________________________________
+________________________________________
+All BF21 factors are greater than 10 : True
+All BF12 factors are smaller than 0.1 : True
+average_BF12: 0.04365364897366865
+average_BF21: 22.907592458151388
+averaged evidences BF12: 0.04365364897366865
+averaged evidences BF21: 22.907592458151388
+harmonic average BF12: 0.04365364897366865
+harmonic average BF21: 22.907592458151388
