@@ -1,0 +1,57 @@
+________________________________________
+______Bayes factor analysis output______
+________________________________________
+log_evidence_model1: -38.697163493679064
+log_evidence_model2: -38.812013451574
+log_BF12: 0.11484995789493979
+BF12: 1.121705121947285
+log_BF21: -0.11484995789493979
+BF21: 0.891499896393444
+________________________________________
+________________________________________
+All BF21 factors are greater than 10 : False
+All BF12 factors are smaller than 0.1 : False
+average_BF12: 1.121705121947285
+average_BF21: 0.891499896393444
+averaged evidences BF12: 1.1217051219472849
+averaged evidences BF21: 0.8914998963934441
+harmonic average BF12: 1.121705121947285
+harmonic average BF21: 0.8914998963934438
+________________________________________
+______Bayes factor analysis output______
+________________________________________
+log_evidence_model1: -38.69620335847504
+log_evidence_model2: -38.80749540379358
+log_BF12: 0.11129204531854242
+BF12: 1.1177212844621747
+log_BF21: -0.11129204531854242
+BF21: 0.8946774244181814
+________________________________________
+________________________________________
+All BF21 factors are greater than 10 : False
+All BF12 factors are smaller than 0.1 : False
+average_BF12: 1.1177212844621747
+average_BF21: 0.8946774244181814
+averaged evidences BF12: 1.1177212844621747
+averaged evidences BF21: 0.8946774244181814
+harmonic average BF12: 1.1177212844621747
+harmonic average BF21: 0.8946774244181814
+________________________________________
+______Bayes factor analysis output______
+________________________________________
+log_evidence_model1: -38.710015088889875
+log_evidence_model2: -38.84062742991716
+log_BF12: 0.13061234102728747
+BF12: 1.1395259482187763
+log_BF21: -0.13061234102728747
+BF21: 0.8775579016547425
+________________________________________
+________________________________________
+All BF21 factors are greater than 10 : False
+All BF12 factors are smaller than 0.1 : False
+average_BF12: 1.1395259482187763
+average_BF21: 0.8775579016547425
+averaged evidences BF12: 1.139525948218776
+averaged evidences BF21: 0.8775579016547426
+harmonic average BF12: 1.1395259482187763
+harmonic average BF21: 0.8775579016547425

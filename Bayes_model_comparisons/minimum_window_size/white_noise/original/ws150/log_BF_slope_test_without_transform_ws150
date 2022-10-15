@@ -1,0 +1,99 @@
+Unable to init server: Could not connect: Connection refused
+Unable to init server: Could not connect: Connection refused
+
+(calculate_Bayes_Factor.py:27987): Gdk-CRITICAL **: 13:01:24.320: gdk_cursor_new_for_display: assertion 'GDK_IS_DISPLAY (display)' failed
+
+(calculate_Bayes_Factor.py:27987): Gdk-CRITICAL **: 13:01:24.321: gdk_cursor_new_for_display: assertion 'GDK_IS_DISPLAY (display)' failed
+calculate_Bayes_Factor.py:168: RuntimeWarning: divide by zero encountered in log
+  log_evidence_model2 = np.log(np.sum(np.exp(log_LH_model2_array)) / float(n_prior_samples))
+calculate_Bayes_Factor.py:201: RuntimeWarning: divide by zero encountered in double_scalars
+  print('averaged evidences BF12: ' + str(np.sum(np.exp(log_evidence_M1_array))/np.sum(np.exp(log_evidence_M2_array))))
+calculate_Bayes_Factor.py:41: RuntimeWarning: divide by zero encountered in double_scalars
+  return N / denominator
+calculate_Bayes_Factor.py:40: RuntimeWarning: divide by zero encountered in true_divide
+  denominator = np.sum(1. / x)
+(3, 262)
+______MC run: 1/1______
+data_shape:  (152,)
+-28.94357743097239
+0.5047745919559878
+[-3906.3623096  -1506.01548162 -7518.20716305 ... -1937.62098421
+  -881.38819088 -2607.87147634]
+[-71903.54502486 -12259.41157356 -11144.15850686 ...  -6325.12896007
+  -2750.95140177  -3916.1809506 ]
+10000000.0
+________________________________________
+______Bayes factor analysis output______
+________________________________________
+log_evidence_model1: -420.72739920123377
+log_evidence_model2: -inf
+log_BF12: inf
+BF12: inf
+log_BF21: -inf
+BF21: 0.0
+________________________________________
+________________________________________
+All BF21 factors are greater than 10 : False
+All BF12 factors are smaller than 0.1 : False
+average_BF12: inf
+average_BF21: 0.0
+averaged evidences BF12: inf
+averaged evidences BF21: 0.0
+harmonic average BF12: inf
+harmonic average BF21: 0.0
+______MC run: 1/1______
+data_shape:  (152,)
+-50.042016806722685
+0.8570237904764554
+[-34381.43166483  -2389.71516044 -11379.65699903 ...  -9015.44905561
+  -6521.86051391  -3605.44761246]
+[ -92600.42374265   -6614.67947013  -39082.88298924 ... -122864.39601526
+  -18567.6367044   -10510.00608793]
+10000000.0
+________________________________________
+______Bayes factor analysis output______
+________________________________________
+log_evidence_model1: -446.48930560865614
+log_evidence_model2: -inf
+log_BF12: inf
+BF12: inf
+log_BF21: -inf
+BF21: 0.0
+________________________________________
+________________________________________
+All BF21 factors are greater than 10 : False
+All BF12 factors are smaller than 0.1 : False
+average_BF12: inf
+average_BF21: 0.0
+averaged evidences BF12: inf
+averaged evidences BF21: 0.0
+harmonic average BF12: inf
+harmonic average BF21: 0.0
+______MC run: 1/1______
+data_shape:  (152,)
+-49.89195678271308
+0.823736489628964
+[-154585.9036538   -25522.93586633  -18998.183492   ...   -5591.26917781
+   -4784.32509115   -5420.05009484]
+[-203291.01029391  -34670.24467602  -56815.70346361 ...  -36311.29438845
+   -6135.48610258  -16444.77128129]
+10000000.0
+________________________________________
+______Bayes factor analysis output______
+________________________________________
+log_evidence_model1: -494.27436903004497
+log_evidence_model2: -inf
+log_BF12: inf
+BF12: inf
+log_BF21: -inf
+BF21: 0.0
+________________________________________
+________________________________________
+All BF21 factors are greater than 10 : False
+All BF12 factors are smaller than 0.1 : False
+average_BF12: inf
+average_BF21: 0.0
+averaged evidences BF12: inf
+averaged evidences BF21: 0.0
+harmonic average BF12: inf
+harmonic average BF21: 0.0

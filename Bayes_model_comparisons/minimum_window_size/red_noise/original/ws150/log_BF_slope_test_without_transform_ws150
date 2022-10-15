@@ -1,0 +1,72 @@
+Unable to init server: Could not connect: Connection refused
+Unable to init server: Could not connect: Connection refused
+
+(calculate_Bayes_Factor.py:28076): Gdk-CRITICAL **: 13:03:08.110: gdk_cursor_new_for_display: assertion 'GDK_IS_DISPLAY (display)' failed
+
+(calculate_Bayes_Factor.py:28076): Gdk-CRITICAL **: 13:03:08.111: gdk_cursor_new_for_display: assertion 'GDK_IS_DISPLAY (display)' failed
+calculate_Bayes_Factor.py:170: RuntimeWarning: divide by zero encountered in log
+  log_evidence_model2 = np.log(np.sum(np.exp(log_LH_model2_array)) / float(n_prior_samples))
+(3, 262)
+time of no possible return: 94.79184898112264
+______MC run: 1/1______
+data_shape:  (153,)
+-26.71468587434974
+0.4625614308223289
+[  -440.52982752 -24592.99048806  -5050.07178255 ... -27273.70312683
+  -1405.81020275 -50586.17344169]
+[  -2810.48032623  -65181.61682125  -77844.13770412 ...  -31288.24877737
+   -5105.40522183 -107469.87806882]
+10000000.0
+________________________________________
+______Bayes factor analysis output______
+________________________________________
+log_evidence_model1: -408.39560800511
+log_evidence_model2: -inf
+log_BF12: inf
+BF12: inf
+log_BF21: -inf
+BF21: 0.0
+________________________________________
+________________________________________
+time of no possible return: 94.79184898112264
+______MC run: 1/1______
+data_shape:  (153,)
+-28.211284513805523
+0.4875354047869148
+[ -2497.35649902  -1522.23858592  -3616.03819417 ...  -2145.07686064
+ -11770.70713539  -1544.63845077]
+[-27356.43037303  -9616.49639777  -3624.49566655 ... -14754.05735557
+ -50023.43264939 -13410.51749228]
+10000000.0
+________________________________________
+______Bayes factor analysis output______
+________________________________________
+log_evidence_model1: -471.48861881426404
+log_evidence_model2: -inf
+log_BF12: inf
+BF12: inf
+log_BF21: -inf
+BF21: 0.0
+________________________________________
+________________________________________
+time of no possible return: 94.79184898112264
+______MC run: 1/1______
+data_shape:  (153,)
+-23.853541416566628
+0.491516762955182
+[-15167.3261829   -8502.84885251  -3998.92416422 ... -25985.54885306
+ -52936.25787531  -2687.91651782]
+[ -70218.68219102  -79008.91200935  -33991.0169186  ...  -45803.01414476
+ -120280.47902708   -3391.66343476]
+10000000.0
+________________________________________
+______Bayes factor analysis output______
+________________________________________
+log_evidence_model1: -491.8234423451007
+log_evidence_model2: -inf
+log_BF12: inf
+BF12: inf
+log_BF21: -inf
+BF21: 0.0
+________________________________________
+________________________________________

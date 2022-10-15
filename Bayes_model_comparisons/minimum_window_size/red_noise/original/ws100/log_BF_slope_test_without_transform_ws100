@@ -1,0 +1,62 @@
+Unable to init server: Could not connect: Connection refused
+Unable to init server: Could not connect: Connection refused
+
+(calculate_Bayes_Factor.py:28064): Gdk-CRITICAL **: 13:02:59.609: gdk_cursor_new_for_display: assertion 'GDK_IS_DISPLAY (display)' failed
+
+(calculate_Bayes_Factor.py:28064): Gdk-CRITICAL **: 13:02:59.610: gdk_cursor_new_for_display: assertion 'GDK_IS_DISPLAY (display)' failed
+calculate_Bayes_Factor.py:170: RuntimeWarning: divide by zero encountered in log
+  log_evidence_model2 = np.log(np.sum(np.exp(log_LH_model2_array)) / float(n_prior_samples))
+(3, 264)
+time of no possible return: 94.99187398424803
+______MC run: 1/1______
+data_shape:  (155,)
+-25.8343337334934
+0.43869208397644777
+[-83248.5673892    -639.04467817 -15999.66837986 ...   -807.42769198
+   -686.2261192   -9274.23245532]
+[-144966.42704786   -4566.34166484  -27817.05233005 ...   -7720.52556258
+   -3369.54458522  -55597.57341445]
+10000000.0
+________________________________________
+______Bayes factor analysis output______
+________________________________________
+log_evidence_model1: -450.7435668833881
+log_evidence_model2: -inf
+log_BF12: inf
+BF12: inf
+log_BF21: -inf
+BF21: 0.0
+________________________________________
+________________________________________
+time of no possible return: 94.99187398424803
+______MC run: 1/1______
+data_shape:  (155,)
+-26.164465786314526
+0.4436934595266677
+[-11297.17246214   -592.91493272 -54014.05990098 ...  -8483.88148282
+ -12494.57740228   -529.35052062]
+[ -89923.05743893   -2039.00714326 -105368.14654093 ...  -29662.59812959
+  -52145.71227087   -1903.26960432]
+10000000.0
+________________________________________
+______Bayes factor analysis output______
+________________________________________
+log_evidence_model1: -493.85601790908737
+log_evidence_model2: -inf
+log_BF12: inf
+BF12: inf
+log_BF21: -inf
+BF21: 0.0
+________________________________________
+________________________________________
+time of no possible return: 94.99187398424803
+______MC run: 1/1______
+data_shape:  (155,)
+-37.36694677871149
+0.6383898648745212
+[  -2710.56723853  -17486.20775909   -3078.13075363 ...   -4269.89920246
+ -105326.17359979   -7400.00391714]
+[ -15640.46843746  -23912.77196141   -8183.65942197 ...  -27083.05470617
+ -175498.02935922   -8124.98805292]
+10000000.0
+Both models are inadequate! No decision can be made probably due to very noisy data.
